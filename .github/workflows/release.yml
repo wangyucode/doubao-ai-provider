@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - "v*"
+    branches: [main]
+  workflow_dispatch:
 
 jobs:
   release:
@@ -26,6 +28,7 @@ jobs:
         with:
           node-version: "22"
           cache: "pnpm"
+          registry-url: "https://registry.npmjs.org/"
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
