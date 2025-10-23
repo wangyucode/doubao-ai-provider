@@ -1,8 +1,8 @@
 import { OpenAICompatibleChatLanguageModel } from "@ai-sdk/openai-compatible";
 import {
-  LanguageModelV3,
+  LanguageModelV2,
   NoSuchModelError,
-  ProviderV3,
+  ProviderV2,
 } from "@ai-sdk/provider";
 import {
   FetchFunction,
@@ -31,21 +31,21 @@ export interface DoubaoProviderSettings {
   fetch?: FetchFunction;
 }
 
-export interface DoubaoProvider extends ProviderV3 {
+export interface DoubaoProvider extends ProviderV2 {
   /**
    Creates a Doubao model for text generation.
    */
-  (modelId: DoubaoChatModelId): LanguageModelV3;
+  (modelId: DoubaoChatModelId): LanguageModelV2;
 
   /**
    Creates a Doubao model for text generation.
    */
-  languageModel(modelId: DoubaoChatModelId): LanguageModelV3;
+  languageModel(modelId: DoubaoChatModelId): LanguageModelV2;
 
   /**
    Creates a Doubao chat model for text generation.
    */
-  chat(modelId: DoubaoChatModelId): LanguageModelV3;
+  chat(modelId: DoubaoChatModelId): LanguageModelV2;
 }
 
 export function createDoubao(

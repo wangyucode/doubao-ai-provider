@@ -10,6 +10,12 @@ The Doubao provider is available in the `doubao-ai-provider` module. You can ins
 npm i doubao-ai-provider
 ```
 
+Set up your `.env` file / environment with your API key.
+
+```bash
+DOUBAO_API_KEY=<your-api-key>
+```
+
 ## Provider Instance
 
 You can import the default provider instance `doubao` from `doubao-ai-provider`:
