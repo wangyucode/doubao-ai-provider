@@ -69,6 +69,7 @@ export function createDoubao(
       url: ({ path }) => `${baseURL}${path}`,
       headers: getHeaders,
       fetch: options.fetch,
+      includeUsage: true,
       // metadataExtractor will be added later
     });
   };

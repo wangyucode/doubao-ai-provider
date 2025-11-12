@@ -1,6 +1,6 @@
 {
   "name": "doubao-ai-provider",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Community-built Doubao AI Provider for Vercel AI SDK",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -8,7 +8,8 @@
     "dist/**/*"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "test": "ts-node test/index.ts"
   },
   "exports": {
     "./package.json": "./package.json",
@@ -27,13 +28,16 @@
   ],
   "author": "wangyu@wycode.cn",
   "license": "Apache-2.0",
-  "packageManager": "pnpm@10.19.0",
+  "packageManager": "pnpm@10.22.0+sha512.bf049efe995b28f527fd2b41ae0474ce29186f7edcb3bf545087bd61fbbebb2bf75362d1307fda09c2d288e1e499787ac12d4fcb617a974718a6051f2eee741c",
   "dependencies": {
     "@ai-sdk/openai-compatible": "^1.0.22",
     "@ai-sdk/provider": "^2.0.0",
     "@ai-sdk/provider-utils": "^3.0.12"
   },
   "devDependencies": {
+    "ai": "^5.0.92",
+    "dotenv": "^17.2.3",
+    "ts-node": "^10.9.2",
     "tsup": "^8.5.0",
     "typescript": "^5.9.3"
   },
