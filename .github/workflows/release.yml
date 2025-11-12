@@ -11,7 +11,7 @@ jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
       id-token: write
 
     steps:
@@ -29,6 +29,9 @@ jobs:
           node-version: "22"
           cache: "pnpm"
           registry-url: "https://registry.npmjs.org/"
+
+      - name: Update npm
+        run: npm install -g npm@latest && npm -v
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
